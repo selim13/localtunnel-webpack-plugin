@@ -1,5 +1,5 @@
-const localtunnel = require("localtunnel");
-const log = require("webpack-log")({ name: "localtunnel" });
+const localtunnel = require('localtunnel');
+const log = require('webpack-log')({ name: 'localtunnel' });
 
 function color(useColor, msg) {
   if (useColor) return `\u001b[1m\u001b[34m${msg}\u001b[39m\u001b[22m`;
@@ -15,7 +15,7 @@ function connect(options) {
 
     log.info(`Tunnel url: ${color(true, tunnel.url)}`);
 
-    tunnel.on("error", err => {
+    tunnel.on('error', err => {
       tunnel.close();
 
       if (options.reconnect) {
@@ -40,7 +40,7 @@ class LocaltunnelWebpackPlugin {
       reconnect: true,
       reconnectInterval: 1000,
       localtunnel: {},
-      ...options
+      ...options,
     };
   }
 
@@ -50,7 +50,7 @@ class LocaltunnelWebpackPlugin {
     this.options.port = this.options.port || compiler.options.devServer.port;
     this.options.localtunnel = {
       local_host: compiler.options.devServer.host,
-      ...this.options.localtunnel
+      ...this.options.localtunnel,
     };
 
     connect(this.options);
