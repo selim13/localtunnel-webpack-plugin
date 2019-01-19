@@ -1,0 +1,16 @@
+{
+  "name": "localtunnel-webpack-plugin",
+  "version": "1.0.0",
+  "description": "Launch localtunnel client instance paired with webpack-dev-server",
+  "main": "index.js",
+  "author": "Dmitry Seleznyov",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "localtunnel": "^1.9.1",
+    "webpack-log": "^2.0.0"
+  },
+  "peerDependencies": {
+    "webpack": "^4.28.4"
+  }
+}
