@@ -3,9 +3,13 @@
   "version": "1.0.0",
   "description": "Launch localtunnel client instance paired with webpack-dev-server",
   "main": "index.js",
-  "author": "Dmitry Seleznyov",
+  "author": "Dmitry Seleznyov <selim013@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/selim13/localtunnel-webpack-plugin.git"
+  },
+  "homepage": "https://github.com/selim13/localtunnel-webpack-plugin",
   "license": "MIT",
-  "private": false,
   "scripts": {
     "lint": "eslint --cache ."
   },
